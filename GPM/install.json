@@ -19,6 +19,15 @@
                 "Common",
                 "CacheStorage"
             ]
+        },
+        {
+            "name": "LogViewer",
+            "version": "2.1.0",
+            "dependency": [
+                "Common",
+                "UI",
+                "CacheStorage"
+            ]
         }
     ]
 }

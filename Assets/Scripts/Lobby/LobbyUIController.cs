@@ -11,7 +11,7 @@ public class LobbyUIController : MonoBehaviour
 
     public void Init()
     {
-        UIManager.Instance.EnableStatsUI(true);
+        UIManager.Instance.EnableGoodsUI(true);
         SetCurrChapter();
     }
 
@@ -60,5 +60,13 @@ public class LobbyUIController : MonoBehaviour
 
         var uiData = new BaseUIData();
         UIManager.Instance.OpenUI<ChapterListUI>(uiData);
+    }
+    public void OnClickStartBtn()
+    {
+        Logger.Log($"{GetType()}::OnClickStartBtn");
+
+        AudioManager.Instance.PlaySFX(SFX.ui_button_click);
+        AudioManager.Instance.StopBGM();
+        LobbyManager.Instance.StartInGame();
     }
 }

@@ -46,7 +46,7 @@ public class TitleManager : MonoBehaviour
 
         AudioManager.Instance.OnLoadUserData();
 
-        UIManager.Instance.EnableStatsUI(false);
+        UIManager.Instance.EnableGoodsUI(false);
 
         StartCoroutine(LoadGameCo());
     }
